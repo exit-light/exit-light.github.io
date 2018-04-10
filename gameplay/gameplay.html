@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="gameplay.css" />
+</head>
+
+<body>
+    <audio class="hit_sound" src="hit.mp3"></audio>
+    <div class="wrapper">
+        <header class="header">
+            <button class="randomSet" onclick="setAllShipRandom();">Разместить</button>
+            <button class="attackButton" onclick="attackAl('.areaPl');">Attack random</button>
+        </header>
+        <section class="content">
+            <div class="columns">
+                <main class="main">
+                    <div class="notifications-block">
+                        Какое то важное сообщение!
+                    </div>
+                    <div class="wrapper_areas">
+                        <div class="areaPl"></div>
+                        <div class="areaAl"></div>
+                    </div>
+                </main>
+                <aside class="sidebar-first">
+                    <h5 class="aside__title">Наши</h5>
+                    <span class="avatar" data-toggle="tooltip" href="#" data-placement="right" title="" data-original-title="">
+                    <img src="enemy_avatar.png" alt="avatar">
+                </span>
+                    <div class="aside__counter">Кол-во ходов: 0</div>
+                    <div class="aside__counter">Кол-во попаданий: <span class="hitPlCount">0</span></div>
+                    <div class="aside__counter">Кол-во потоплений: 0</div>
+                </aside>
+                <aside class="sidebar-second">
+                    <h5 class="aside__title">Враги</h5>
+                    <span class="avatar" data-toggle="tooltip" href="#" data-placement="right" title="" data-original-title="">
+                    <img src="enemy_avatar.png" alt="avatar">
+                </span>
+                    <div class="aside__counter">Кол-во ходов: 0</div>
+                    <div class="aside__counter">Кол-во попаданий: <span class="hitAlCount">0</span></div>
+                    <div class="aside__counter">Кол-во потоплений: 0</div>
+                </aside>
+            </div>
+        </section>
+        <footer class="footer">Footer: Fixed height</footer>
+    </div>
+    <script src="../script.js"></script>
+</body>
+
+</html>
