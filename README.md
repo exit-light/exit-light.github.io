@@ -1,2 +1,2 @@
-# warshipgame.github.io
+# exit-light.github.io
 warship game vanilla js
