@@ -104,3 +104,25 @@ aside {
     color: #946806;
     margin: 2rem 0;
 }
+
+@media (max-width: 1210px) {
+    .cell {
+        width: 25px;
+        height: 25px;
+    }
+    .areaPl,
+    .areaAl {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 340px;
+        position: relative;
+    }
+}
+
+@media only screen and (device-height: 600px) and (orientation: portrait) {
+    .wrapper_areas {
+        justify-content: space-around;
+        flex-direction: column-reverse;
+    }
+}

@@ -133,13 +133,14 @@ function setDemarkDestroyedShip(currentX, currentY, parent) {
 }
 
 function attackAl(parent) { // поведение Al при атаке
-    document.querySelector('.turnCountAl').textContent = ++turnCountAl; //прибавляем счет ходов компа
+
     if (alTurnStatus === "default") {
         cellGenerator(); // гнерим координату куда бить
         attackedCell = document.querySelector(parent + ' .cell[data-x="' + cellX + '"][data-y="' + cellY + '"]'); //определяем клетку
         if (attackedCell.getAttribute('data-attacked') === 'yes') { //если уже сюда была атака, то генерим заново
             attackAl(parent);
         } else {
+            document.querySelector('.turnCountAl').textContent = ++turnCountAl; //прибавляем счет ходов компа
             attackedCell.setAttribute('data-attacked', 'yes'); //закрашиваем клетку, отмечаем как атакованную
             attackedCell.classList.add('tried');
             if (attackedCell.getAttribute('data-ship-availability') === 'yes') { //если AL попал в корабль
@@ -164,6 +165,7 @@ function attackAl(parent) { // поведение Al при атаке
     if (alTurnStatus === "search") {
         //alert(attackedCell.attr('data-x')+ ' ' + attackedCell.attr('data-y'));
         //alert(cellX + ' ' + cellY);
+        document.querySelector('.turnCountAl').textContent = ++turnCountAl; //прибавляем счет ходов компа
         quantityCellsSet = 1;
         accessCellScaning('data-attacked', '.areaPl');
         //alert('значение массива ' + accessDirectionArr + 'длина ' + accessDirectionArr.length);
@@ -214,7 +216,7 @@ function attackAl(parent) { // поведение Al при атаке
         return;
     }
     if (alTurnStatus === "next") {
-
+        document.querySelector('.turnCountAl').textContent = ++turnCountAl; //прибавляем счет ходов компа
         if (cellX === cellXSearch) {
             cellXNext = cellX;
             (function() {
@@ -300,6 +302,7 @@ function attackAl(parent) { // поведение Al при атаке
         }
     }
     if (alTurnStatus === "attackStep4") {
+        document.querySelector('.turnCountAl').textContent = ++turnCountAl; //прибавляем счет ходов компа
         //alert('первая клетка ' + cellX + cellY + 'вторая клетка ' + cellXSearch + cellYSearch + 'третяя клетка' + cellXNext + cellYNext);
         if (cellX === cellXSearch) {
             (function() {
