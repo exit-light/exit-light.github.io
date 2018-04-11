@@ -2,31 +2,16 @@ html,
 body {
     padding: 0;
     margin: 0;
-    /* height: 100%; */
-    position: relative;
+    height: 100%;
 }
 
 .bg-black {
     background-color: #000;
-    background-attachment: fixed;
-    background-image: url('http://www.unesourisetmoi.info/data/medias/photos/082/pixel-art_fonds-animes_jeux-de-combat_HD_01.gif');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    image-rendering: optimizeSpeed;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: optimize-contrast;
-    image-rendering: pixelated;
-    -ms-interpolation-mode: nearest-neighbor;
 }
 
 .title-container {
-    width: 55%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 20%);
+    width: 50%;
+    margin: 1rem auto;
 }
 
 .title-menu {
@@ -34,9 +19,7 @@ body {
     font-family: 'Press Start 2P', cursive;
     text-align: center;
     font-size: .6rem;
-    background-color: #00000073;
     line-height: 1.1rem;
-    margin: 3rem 0;
     padding: 1rem;
     box-shadow: 0 2px 0px #fff, -2px 0px 0px #fff, 0 -2px 0 #fff, 2px 0 0 #fff;
 }
@@ -46,16 +29,12 @@ body {
     text-decoration: none;
 }
 
-.title-menu__music-option {
-    margin: 2rem 0;
-}
-
 .startBtn {
     padding: 10px;
-    background-color: #d63131;
+    background-color: #5ac318;
     color: #fff;
     text-transform: uppercase;
-    margin: 1rem 0;
+    margin: 1rem;
     font-family: 'Press Start 2P', cursive;
     cursor: pointer;
     font-size: 1.3rem;
