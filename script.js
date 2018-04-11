@@ -133,7 +133,10 @@ function setDemarkDestroyedShip(currentX, currentY, parent) {
 }
 
 function attackAl(parent) { // поведение Al при атаке
-
+    if (hitAlCount === 20) {
+        gameLose();
+        return
+    }
     if (alTurnStatus === "default") {
         cellGenerator(); // гнерим координату куда бить
         attackedCell = document.querySelector(parent + ' .cell[data-x="' + cellX + '"][data-y="' + cellY + '"]'); //определяем клетку
@@ -412,6 +415,7 @@ function setAllShipRandom() {
 }
 
 function attackPl() {
+    
     document.querySelector('.turnCountPl').textContent = ++turnCountPl; //прибавляем счет ходов игрока
     this.setAttribute('data-attacked', 'yes');
     this.classList.add('tried');
@@ -427,6 +431,10 @@ function attackPl() {
             [].forEach.call(document.querySelectorAll('.areaAl .cell[data-id-ship="' + dataIdShip + '"]'), function(el) {
                 el.classList.add('destroyed');
             });
+            if(hitPlCount === 20) {
+                gameVictory();
+                return
+            }
         }
         //
     } else {
@@ -603,6 +611,12 @@ function setShip(parent) {
         }
     }
 }
+function gameVictory(){
+    alert('ты пабидитель!');
+};
+function gameLose(){
+    alert('ты прогираль!');
+};
 document.addEventListener('DOMContentLoaded', function() {
 
     // Приветствие нашего гавайского человечка срабатывает сразу же после загрузки страницы
