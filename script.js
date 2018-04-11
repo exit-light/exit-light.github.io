@@ -133,6 +133,7 @@ function setDemarkDestroyedShip(currentX, currentY, parent) {
 }
 
 function attackAl(parent) { // поведение Al при атаке
+    document.querySelector('.overlay').style.display = 'block';
     if (hitAlCount === 20) {
         gameLose();
         return
@@ -161,8 +162,9 @@ function attackAl(parent) { // поведение Al при атаке
                     alTurnStatus = "search"; // на следующем шаге ищем рядом
                     setTimeout(function() { attackAl('.areaPl') }, 1000);
                 }
+            } else {
+                document.querySelector('.overlay').style.display = 'none';
             }
-            document.querySelector('.overlay').style.display = 'none';
         }
         return;
     }
