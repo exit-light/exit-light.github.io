@@ -4,7 +4,7 @@ body {
     font-size: 1rem;
 }
 
-.wrapper {
+.wrapper-gameplay {
     min-height: 100vh;
     background: #ccc;
     display: flex;

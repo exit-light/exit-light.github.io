@@ -136,6 +136,7 @@ body {
     background-image: url('https://i.pinimg.com/originals/36/b9/47/36b947cf5d4d32fc43f4f65dd3eb31b0.png');
     -webkit-animation: playYY .8s steps(9) forwards, playXX .8s steps(9) forwards;
     animation: playYY .8s steps(9) forwards, playXX .8s steps(9) forwards;
+    -webkit-background-size: 18.750rem;
     background-size: 18.750rem;
 }
 

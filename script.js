@@ -162,6 +162,7 @@ function attackAl(parent) { // поведение Al при атаке
                     setTimeout(function() { attackAl('.areaPl') }, 1000);
                 }
             }
+            document.querySelector('.overlay').style.display = 'none';
         }
         return;
     }
@@ -215,6 +216,7 @@ function attackAl(parent) { // поведение Al при атаке
             return;
         } else { //если AL не попал в корабль
             alTurnStatus === "search";
+            document.querySelector('.overlay').style.display = 'none';
         }
         return;
     }
@@ -259,6 +261,7 @@ function attackAl(parent) { // поведение Al при атаке
                 return;
             } else {
                 alTurnStatus === "next";
+                document.querySelector('.overlay').style.display = 'none';
             }
             return;
         }
@@ -300,6 +303,7 @@ function attackAl(parent) { // поведение Al при атаке
                 return;
             } else {
                 alTurnStatus === "next";
+                document.querySelector('.overlay').style.display = 'none';
             }
             return;
         }
@@ -344,6 +348,7 @@ function attackAl(parent) { // поведение Al при атаке
                 return;
             } else {
                 alTurnStatus === "default";
+                document.querySelector('.overlay').style.display = 'none';
             }
             return;
         }
@@ -385,6 +390,7 @@ function attackAl(parent) { // поведение Al при атаке
                 return;
             } else {
                 alTurnStatus === "next";
+                document.querySelector('.overlay').style.display = 'none';
             }
             return;
         }
@@ -438,6 +444,7 @@ function attackPl() {
         }
         //
     } else {
+        document.querySelector('.overlay').style.display = 'block';
         setTimeout(function() { attackAl('.areaPl') }, 1000);
     }
     this.removeEventListener('click', attackPl);
@@ -613,9 +620,11 @@ function setShip(parent) {
 }
 function gameVictory(){
     alert('ты пабидитель!');
+    document.querySelector('.wrapper-gameplay').style.display = 'none';
 };
 function gameLose(){
     alert('ты прогираль!');
+    document.querySelector('.wrapper-gameplay').style.display = 'none';
 };
 document.addEventListener('DOMContentLoaded', function() {
 
