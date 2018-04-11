@@ -89,14 +89,14 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 420px;
+    width: 26.250rem;
     position: relative;
 }
 
 .cell {
-    width: 35px;
+    width: 2.188rem;
     margin: 2px;
-    height: 35px;
+    height: 2.188rem;
     background-color: #fafdff;
     /*display: inline-block;*/
     cursor: pointer;
@@ -136,7 +136,7 @@ body {
     background-image: url('https://i.pinimg.com/originals/36/b9/47/36b947cf5d4d32fc43f4f65dd3eb31b0.png');
     -webkit-animation: playYY .8s steps(9) forwards, playXX .8s steps(9) forwards;
     animation: playYY .8s steps(9) forwards, playXX .8s steps(9) forwards;
-    background-size: 300px;
+    background-size: 18.750rem;
 }
 
 @-webkit-keyframes playYY {
@@ -186,7 +186,7 @@ body {
 .destroyed {
     background-color: rgb(161, 86, 0)!important;
     background-image: url('https://vignette.wikia.nocookie.net/fireball-org/images/4/4a/Livinggif.gif/revision/latest?cb=20160512013301');
-    background-size: 25px;
+    background-size: 1.563rem;
     background-repeat: no-repeat;
     background-position: center center;
     animation: unset;
