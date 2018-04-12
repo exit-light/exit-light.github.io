@@ -89,16 +89,31 @@ function startGame() {
 
 function nataliMP() {
     alert('Стартуем!');
+    document.querySelector('.overlay_screen').style.opacity = 1;
     introStart(); //запускаем вступтиельный ролик
 }
 
 function introStart() {
-    document.body.innerHTML = '';
-    document.body.style.backgroundColor = '#000';
+    document.querySelector('.title-container').style.display = 'none';
+    document.body.classList.remove('bg-title-screen');
+    document.body.classList.add('bg-black-screen');
+    document.querySelector('.overlay_screen').style.opacity = 0;
     document.body.insertAdjacentHTML('beforeend',
-        '<img width="100px" src="' + personSailor + '"><img width="100px" src="' + personSailor2 + '"/><div class="text-typing">Капитан! Там один дебилойд бережка попутал. Присутпить к расздаче песдов?</div>'
+        '<div class="cut-scene-container"><div class="cut-scene-container__avatar-block"><div class="cut-scene-container__avatar-block__avatar"><img src="gameplay/enemy_avatar.png"></div><div class="cut-scene-container__avatar-block__avatar"><img src="gameplay/enemy_avatar.png"></div></div><div class="cut-scene-container__textblock"></div></div>'
     );
+    var text = "охдалите свое трахание";
+    var itext = 0;
+    function type(){
+        itext++;
+        if( itext <= text.length )
+        document.querySelector(".cut-scene-container__textblock").innerHTML = text.substr(0, itext);
+        
+        setTimeout( type, 50 );
+    }
+    type();
 }
+
+
 ///////////
 /*
 function setDemarkDestroyedShip(currentX, currentY, parent) {
@@ -628,9 +643,3 @@ function gameLose(){
     alert('ты прогираль!');
     document.querySelector('.wrapper-gameplay').style.display = 'none';
 };
-document.addEventListener('DOMContentLoaded', function() {
-
-    // Приветствие нашего гавайского человечка срабатывает сразу же после загрузки страницы
-
-    console.log('Aloha');
-});

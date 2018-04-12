@@ -120,7 +120,11 @@ aside {
     }
 }
 
-@media (max-width: 610px) and (orientation: portrait) {
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
     .wrapper_areas {
         justify-content: space-around;
         flex-direction: column-reverse;

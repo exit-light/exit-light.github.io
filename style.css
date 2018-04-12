@@ -3,13 +3,13 @@ body {
     padding: 0;
     margin: 0;
     /*height: 100%;*/
-    position: relative;
+    /*position: relative;*/
 }
 
-.bg-black {
+.bg-title-screen {
     background-color: #000;
     background-attachment: fixed;
-    background-image: url('http://www.unesourisetmoi.info/data/medias/photos/082/pixel-art_fonds-animes_jeux-de-combat_HD_01.gif');
+    background-image: url('bg-title.gif');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -20,13 +20,15 @@ body {
     image-rendering: pixelated;
     -ms-interpolation-mode: nearest-neighbor;
 }
-
+.bg-black-screen {
+    background-color: #000;
+}
 .title-container {
     width: 55%;
     position: absolute;
-    top: 50%;
+    top: 5%;
     left: 50%;
-    transform: translate(-50%, 20%);
+    transform: translate(-50%, 10%);
     width: 50%;
     margin: 1rem auto;
 }
@@ -60,30 +62,40 @@ body {
     cursor: pointer;
     font-size: 1.3rem;
 }
-
-.text-typing {
+.cut-scene-container {
+    margin: 10% auto;
+    width: 55%;
+    padding: 1rem;
+    box-shadow: 0 2px 0px #fff, -2px 0px 0px #fff, 0 -2px 0 #fff, 2px 0 0 #fff;
+}
+.cut-scene-container__avatar-block {
+    display: flex;
+    justify-content: space-around;
+}
+.cut-scene-container__avatar-block__avatar {
+    position: relative;
+    margin: .5rem 0;
+    display: inline-block;
+    max-width: 100px;
     width: 100%;
-    color: #fff;
-    font-size: .9em;
-    font-family: 'Press Start 2P', cursive;
     white-space: nowrap;
-    overflow: hidden;
-    -webkit-animation: type 4s steps(50, end);
-    animation: type 4s steps(50, end);
+    border-radius: 1000px;
+    vertical-align: bottom;
+    border: 4px solid #ab8c46;
+    box-shadow: 1px 1px 0 #ffffffcf;
 }
 
-@keyframes type {
-    from {
-        width: 0;
-    }
+.cut-scene-container__avatar-block__avatar img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border: 0 none;
+    border-radius: 1000px;
 }
-
-@-webkit-keyframes type {
-    from {
-        width: 0;
-    }
+.cut-scene-container__textblock {
+    text-align: center;
+    color: #fff;
 }
-
 .areaPl,
 .areaAl {
     display: flex;
