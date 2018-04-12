@@ -4,6 +4,7 @@ body {
     margin: 0;
     /*height: 100%;*/
     /*position: relative;*/
+    font-family: 'Press Start 2P', cursive;
 }
 
 .bg-title-screen {
@@ -20,9 +21,11 @@ body {
     image-rendering: pixelated;
     -ms-interpolation-mode: nearest-neighbor;
 }
+
 .bg-black-screen {
     background-color: #000;
 }
+
 .title-container {
     width: 55%;
     position: absolute;
@@ -35,7 +38,6 @@ body {
 
 .title-menu {
     color: #fff;
-    font-family: 'Press Start 2P', cursive;
     text-align: center;
     font-size: .6rem;
     background-color: #00000073;
@@ -44,9 +46,11 @@ body {
     padding: 1rem;
     box-shadow: 0 2px 0px #fff, -2px 0px 0px #fff, 0 -2px 0 #fff, 2px 0 0 #fff;
 }
+
 .title-menu__music-option {
     margin: 2rem 0;
 }
+
 .title-menu a {
     color: #00b6ff;
     text-decoration: none;
@@ -62,16 +66,19 @@ body {
     cursor: pointer;
     font-size: 1.3rem;
 }
+
 .cut-scene-container {
-    margin: 10% auto;
-    width: 55%;
-    padding: 1rem;
+    margin: 5% auto;
+    width: 40%;
+    padding: 3rem;
     box-shadow: 0 2px 0px #fff, -2px 0px 0px #fff, 0 -2px 0 #fff, 2px 0 0 #fff;
 }
+
 .cut-scene-container__avatar-block {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
+
 .cut-scene-container__avatar-block__avatar {
     position: relative;
     margin: .5rem 0;
@@ -81,8 +88,6 @@ body {
     white-space: nowrap;
     border-radius: 1000px;
     vertical-align: bottom;
-    border: 4px solid #ab8c46;
-    box-shadow: 1px 1px 0 #ffffffcf;
 }
 
 .cut-scene-container__avatar-block__avatar img {
@@ -92,10 +97,12 @@ body {
     border: 0 none;
     border-radius: 1000px;
 }
+
 .cut-scene-container__textblock {
-    text-align: center;
+    text-align: left;
     color: #fff;
 }
+
 .areaPl,
 .areaAl {
     display: flex;

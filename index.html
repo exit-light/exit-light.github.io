@@ -4,29 +4,31 @@
 <head>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&amp;subset=cyrillic" rel="stylesheet">
     <style>
-    .overlay_screen {
-        position: absolute;
-        z-index: 9999;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 100%;
-        width: 100%;
-        opacity: 1;
-        transition: .5s ease;
-        background-color: #000;
-        color: #fff;
-        font-family: 'Press Start 2P', cursive;
-        padding: 1rem;
-    }    
+        .overlay_screen {
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 1;
+            transition: .5s ease;
+            background-color: #000;
+            color: #fff;
+            font-family: 'Press Start 2P', cursive;
+        }
     </style>
     <script>
         window.onload = function() {
             document.querySelector('.overlay_screen').style.opacity = 0;
+            setTimeout(function() {
+                document.querySelector('.overlay_screen').style.display = 'none';
+            }, 300);
         };
     </script>
-    
+
     <link rel="stylesheet" href="style.css" />
     <link rel="preload" href="bg-title.gif">
 </head>
@@ -49,15 +51,15 @@
                 <span>О</span>
                 <span>Й</span>
             </h1>
-            <p>Это морской бой с его самыми классическими <a target="_blank" href="https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D1%80%D1%81%D0%BA%D0%BE%D0%B9_%D0%B1%D0%BE%D0%B9_(%D0%B8%D0%B3%D1%80%D0%B0)">правилами</a>. Кстати, вам не придется тратить время на расстановку
-                своего флота: за вас это сделает программа в случайном порядке при каждом новом старте игры либо, по нажатии на кнопку ? во время игры.
+            <p>Это морской бой с его самыми классическими <a target="_blank" href="https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D1%80%D1%81%D0%BA%D0%BE%D0%B9_%D0%B1%D0%BE%D0%B9_(%D0%B8%D0%B3%D1%80%D0%B0)">правилами</a>. Кстати, вам не придется тратить время
+                на расстановку своего флота: за вас это сделает программа в случайном порядке при каждом новом старте игры либо, по нажатии на кнопку ? во время игры.
             </p>
 
             <div class="title-menu__music-option">МУЗЫКА: <span> ВКЛ.</span></div>
             <div onclick="startGame()" class="startBtn">Стартуем!</div>
         </div>
     </div>
-    
+
     <script src="script.js"></script>
 </body>
 

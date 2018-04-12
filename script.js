@@ -87,6 +87,24 @@ function startGame() {
 
 }
 
+function writeTextByJS(id, text, speed) {
+    document.querySelector(".cut-scene-container__textblock").innerHTML = '';
+    var ele = document.querySelector(id),
+        txt = text.join("").split("");
+
+    var interval = setInterval(function() {
+
+        if (!txt[0]) {
+
+            return clearInterval(interval);
+        };
+
+        ele.innerHTML += txt.shift();
+    }, speed != undefined ? speed : 100);
+
+    return false;
+};
+
 function nataliMP() {
     alert('Стартуем!');
     document.querySelector('.overlay_screen').style.opacity = 1;
@@ -101,16 +119,18 @@ function introStart() {
     document.body.insertAdjacentHTML('beforeend',
         '<div class="cut-scene-container"><div class="cut-scene-container__avatar-block"><div class="cut-scene-container__avatar-block__avatar"><img src="gameplay/enemy_avatar.png"></div><div class="cut-scene-container__avatar-block__avatar"><img src="gameplay/enemy_avatar.png"></div></div><div class="cut-scene-container__textblock"></div></div>'
     );
-    var text = "охдалите свое трахание";
-    var itext = 0;
-    function type(){
-        itext++;
-        if( itext <= text.length )
-        document.querySelector(".cut-scene-container__textblock").innerHTML = text.substr(0, itext);
-        
-        setTimeout( type, 50 );
-    }
-    type();
+
+
+
+
+    setTimeout(function() {
+        writeTextByJS(
+            ".cut-scene-container__textblock", [
+                "Капитан тут хуйня одна приключилась\n",
+                "Вторая строка\n"
+            ]
+        );
+    }, 1000);
 }
 
 
@@ -438,7 +458,7 @@ function setAllShipRandom() {
 }
 
 function attackPl() {
-    
+
     document.querySelector('.turnCountPl').textContent = ++turnCountPl; //прибавляем счет ходов игрока
     this.setAttribute('data-attacked', 'yes');
     this.classList.add('tried');
@@ -454,7 +474,7 @@ function attackPl() {
             [].forEach.call(document.querySelectorAll('.areaAl .cell[data-id-ship="' + dataIdShip + '"]'), function(el) {
                 el.classList.add('destroyed');
             });
-            if(hitPlCount === 20) {
+            if (hitPlCount === 20) {
                 gameVictory();
                 return
             }
@@ -635,11 +655,13 @@ function setShip(parent) {
         }
     }
 }
-function gameVictory(){
+
+function gameVictory() {
     alert('ты пабидитель!');
     document.querySelector('.wrapper-gameplay').style.display = 'none';
 };
-function gameLose(){
+
+function gameLose() {
     alert('ты прогираль!');
     document.querySelector('.wrapper-gameplay').style.display = 'none';
 };
