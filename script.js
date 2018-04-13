@@ -69,7 +69,30 @@ function clearAllCounts() {
     document.querySelector('.destrPlCount').textContent = 0;
     document.querySelector('.destrAlCount').textContent = 0;
 }
-
+function fadeOut(el){
+    el.style.opacity = 1;
+  
+    (function fade() {
+      if ((el.style.opacity -= .1) < 0) {
+        el.style.display = "none";
+      } else {
+        requestAnimationFrame(fade);
+      }
+    })();
+  };
+  
+  function fadeIn(el, display){
+    el.style.opacity = 0;
+    el.style.display = display || "block";
+  
+    (function fade() {
+      var val = parseFloat(el.style.opacity);
+      if (!((val += .1) > 1)) {
+        el.style.opacity = val;
+        requestAnimationFrame(fade);
+      }
+    })();
+  };
 function hitSoundPlay() {
     document.querySelector(".hit_sound").volume = 0.3;
     document.querySelector(".hit_sound").stop();
@@ -82,72 +105,56 @@ HTMLAudioElement.prototype.stop = function() {
 
 function startGame() {
     //блокировать кнопку старт
-    setTimeout(function() { nataliMP() }, 1000);
+    fadeIn(document.querySelector('.overlay_screen'));
+    setTimeout(function() { introStart() }, 1000);
     //морская пехота
 
 }
 
-function writeTextByJS(id, text, speed) {
-    document.querySelector(".cut-scene-container__textblock").innerHTML = '';
-    var ele = document.querySelector(id),
-        txt = text.join("").split("");
-
-    var interval = setInterval(function() {
-
-        if (!txt[0]) {
-
-            return clearInterval(interval);
-        };
-
-        ele.innerHTML += txt.shift();
-    }, speed != undefined ? speed : 100);
-
-    return false;
+function typeText(l, d, g, h, m) { //эффект печатающгося текста
+var b, a = d.shift(),
+    f, e = g,
+    k = performance.now();
+d.push(a);
+a = a.split("");
+b = document.createTextNode(a.shift());
+l.appendChild(b);
+    requestAnimationFrame(function n(c) {
+        if(d.length === 0) {//если массив закончился то завершаем набор. (и вызываем ф-ию)
+            setTimeout(gameplayStart, 3000);
+            return;
+        }
+        a.length || (a = d.shift(), a = a.split(""), e = h);
+        c = (c - k) / e;
+        1 < c && (c = 1);
+        1 == c && (e == h && (b.data = ""), k = performance.now(), b.data += f = a.shift(), e = +f != +f ? g : m);
+        requestAnimationFrame(n)
+    })
 };
-
-function nataliMP() {
-    alert('Стартуем!');
-    document.querySelector('.overlay_screen').style.opacity = 1;
-    introStart(); //запускаем вступтиельный ролик
-}
-
 function introStart() {
+    
+    fadeOut(document.querySelector('.overlay_screen'));
     document.querySelector('.title-container').style.display = 'none';
     document.body.classList.remove('bg-title-screen');
     document.body.classList.add('bg-black-screen');
-    document.querySelector('.overlay_screen').style.opacity = 0;
+    
     document.body.insertAdjacentHTML('beforeend',
         '<div class="cut-scene-container"><div class="cut-scene-container__avatar-block"><div class="cut-scene-container__avatar-block__avatar"><img src="gameplay/enemy_avatar.png"></div><div class="cut-scene-container__avatar-block__avatar"><img src="gameplay/enemy_avatar.png"></div></div><div class="cut-scene-container__textblock"></div></div>'
     );
-
-
-
-
-    setTimeout(function() {
-        writeTextByJS(
-            ".cut-scene-container__textblock", [
-                "Капитан тут хуйня одна приключилась\n",
-                "Вторая строка\n"
-            ]
-        );
-    }, 1000);
+    
+    var textContainer = document.querySelector(".cut-scene-container__textblock");
+    typeText(textContainer, ["12 2","22 4","4 4"], 70, 2000, 70);
 }
-
-
-///////////
-/*
-function setDemarkDestroyedShip(currentX, currentY, parent) {
-  document.querySelector(parent + ' .cell[data-x="' + (currentX + 1) + '"][data-y="' + currentY + '"]').setAttribute('data-attacked', 'yes');
-  document.querySelector(parent + ' .cell[data-x="' + (currentX - 1) + '"][data-y="' + currentY + '"]').setAttribute('data-attacked', 'yes');
-  document.querySelector(parent + ' .cell[data-x="' + currentX + '"][data-y="' + (currentY + 1) + '"]').setAttribute('data-attacked', 'yes');
-  document.querySelector(parent + ' .cell[data-x="' + currentX + '"][data-y="' + (currentY - 1) + '"]').setAttribute('data-attacked', 'yes');
-  document.querySelector(parent + ' .cell[data-x="' + (currentX + 1) + '"][data-y="' + (currentY + 1) + '"]').setAttribute('data-attacked', 'yes');
-  document.querySelector(parent + ' .cell[data-x="' + (currentX + 1) + '"][data-y="' + (currentY - 1) + '"]').setAttribute('data-attacked', 'yes');
-  document.querySelector(parent + ' .cell[data-x="' + (currentX - 1) + '"][data-y="' + (currentY + 1) + '"]').setAttribute('data-attacked', 'yes');
-  document.querySelector(parent + ' .cell[data-x="' + (currentX - 1) + '"][data-y="' + (currentY - 1) + '"]').setAttribute('data-attacked', 'yes');
+function gameplayStart() {
+    
+    fadeOut(document.querySelector('.cut-scene-container'));
+    fadeIn(document.querySelector('.overlay_screen'));
+    setTimeout(function(){
+        document.querySelector('.wrapper-gameplay').style.display = 'block';
+        fadeOut(document.querySelector('.overlay_screen'));
+    }, 2000);
+    
 }
-*/
-
 function setDemarkDestroyedShip(currentX, currentY, parent) {
     var variationDirections = [
         '[data-x="' + (currentX + 1) + '"][data-y="' + currentY + '"]',

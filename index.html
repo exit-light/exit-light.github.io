@@ -13,8 +13,8 @@
             right: 0;
             height: 100%;
             width: 100%;
-            opacity: 1;
-            transition: .5s ease;
+            display: block;
+            
             background-color: #000;
             color: #fff;
             font-family: 'Press Start 2P', cursive;
@@ -22,15 +22,13 @@
     </style>
     <script>
         window.onload = function() {
-            document.querySelector('.overlay_screen').style.opacity = 0;
-            setTimeout(function() {
-                document.querySelector('.overlay_screen').style.display = 'none';
-            }, 300);
+            fadeOut(document.querySelector('.overlay_screen'));
         };
     </script>
 
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preload" href="bg-title.gif">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="gameplay/gameplay.css"/>
+    <link rel="preload" href="bg-title.gif" as="image">
 </head>
 
 <body class="bg-title-screen">
@@ -59,7 +57,44 @@
             <div onclick="startGame()" class="startBtn">Стартуем!</div>
         </div>
     </div>
-
+    <div class="wrapper-gameplay" style="display:none">
+        <header class="header">
+            <button class="randomSet" onclick="setAllShipRandom();">Разместить</button>
+            <button class="attackButton" onclick="attackAl('.areaPl');">Attack random</button>
+        </header>
+        <section class="content">
+            <div class="columns">
+                <main class="main">
+                    <div class="notifications-block">
+                        Какое то важное сообщение!
+                    </div>
+                    <div class="wrapper_areas">
+                        <div class="areaPl"></div>
+                        <div class="areaAl"></div>
+                    </div>
+                </main>
+                <aside class="sidebar-first">
+                    <h5 class="aside__title">Наши</h5>
+                    <span class="avatar" data-toggle="tooltip" href="#" data-placement="right" title="" data-original-title="">
+                    <img src="enemy_avatar.png" >
+                </span>
+                    <div class="aside__counter">Кол-во ходов: <span class="turnCountPl">0</span></div>
+                    <div class="aside__counter">Кол-во попаданий: <span class="hitPlCount">0</span></div>
+                    <div class="aside__counter">Кол-во потоплений: <span class="destrPlCount">0</span></div>
+                </aside>
+                <aside class="sidebar-second">
+                    <h5 class="aside__title">Враги</h5>
+                    <span class="avatar" data-toggle="tooltip" href="#" data-placement="right" title="" data-original-title="">
+                    <img src="enemy_avatar.png" >
+                </span>
+                    <div class="aside__counter">Кол-во ходов: <span class="turnCountAl">0</span></div>
+                    <div class="aside__counter">Кол-во попаданий: <span class="hitAlCount">0</span></div>
+                    <div class="aside__counter">Кол-во потоплений: <span class="destrAlCount">0</span></div>
+                </aside>
+            </div>
+        </section>
+        <footer class="footer">Footer: Fixed height</footer>
+    </div>
     <script src="script.js"></script>
 </body>
 
