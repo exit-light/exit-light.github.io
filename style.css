@@ -154,8 +154,8 @@ body {
 .damaged {
     /*background-color: red!important;*/
     background-image: url('ship-explosive.png');
-    -webkit-animation: playYY 18s steps(9) forwards, playXX 18s steps(9) forwards;
-    animation: playYY 18s steps(9) forwards, playXX 18s steps(9) forwards;
+    -webkit-animation: playYY .8s steps(9) forwards, playXX .8s steps(9) forwards;
+    animation: playYY .8s steps(9) forwards, playXX .8s steps(9) forwards;
     -webkit-background-size: 18.750rem;
     background-size: 18.750rem;
 }
