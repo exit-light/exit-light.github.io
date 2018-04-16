@@ -143,7 +143,7 @@ function introStart() {
     );
     
     var textContainer = document.querySelector(".cut-scene-container__textblock");
-    typeText(textContainer, ["12 2"], 70, 2000, 70);
+    typeText(textContainer, ["Look out! Pirates!!"], 70, 2000, 70);
 }
 function gameplayStart() {
     
@@ -151,7 +151,7 @@ function gameplayStart() {
     fadeIn(document.querySelector('.overlay_screen'));
     setAllShipRandom();
     setTimeout(function(){
-        document.querySelector('.wrapper-gameplay').style.display = 'block';
+        document.querySelector('.wrapper-gameplay').style.display = 'flex';
         fadeOut(document.querySelector('.overlay_screen'));
     }, 2000);
     

@@ -5,6 +5,7 @@ body {
     /*height: 100%;*/
     /*position: relative;*/
     font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
 }
 
 .bg-title-screen {
@@ -152,7 +153,7 @@ body {
 
 .damaged {
     /*background-color: red!important;*/
-    background-image: url('https://i.pinimg.com/originals/36/b9/47/36b947cf5d4d32fc43f4f65dd3eb31b0.png');
+    background-image: url('ship-explosive.png');
     -webkit-animation: playYY .8s steps(9) forwards, playXX .8s steps(9) forwards;
     animation: playYY .8s steps(9) forwards, playXX .8s steps(9) forwards;
     -webkit-background-size: 18.750rem;
@@ -205,7 +206,7 @@ body {
 
 .destroyed {
     background-color: rgb(161, 86, 0)!important;
-    background-image: url('https://vignette.wikia.nocookie.net/fireball-org/images/4/4a/Livinggif.gif/revision/latest?cb=20160512013301');
+    background-image: url('fire.gif');
     background-size: 1.563rem;
     background-repeat: no-repeat;
     background-position: center center;
