@@ -139,16 +139,17 @@ function introStart() {
     document.body.classList.add('bg-black-screen');
     
     document.body.insertAdjacentHTML('beforeend',
-        '<div class="cut-scene-container"><div class="cut-scene-container__avatar-block"><div class="cut-scene-container__avatar-block__avatar"><img src="gameplay/enemy_avatar.png"></div><div class="cut-scene-container__avatar-block__avatar"><img src="gameplay/enemy_avatar.png"></div></div><div class="cut-scene-container__textblock"></div></div>'
+        '<div class="cut-scene-container"><div class="cut-scene-container__avatar-block"><div class="cut-scene-container__avatar-block__avatar"><img src="enemy_avatar.png"></div><div class="cut-scene-container__avatar-block__avatar"><img src="enemy_avatar.png"></div></div><div class="cut-scene-container__textblock"></div></div>'
     );
     
     var textContainer = document.querySelector(".cut-scene-container__textblock");
-    typeText(textContainer, ["12 2","22 4","4 4"], 70, 2000, 70);
+    typeText(textContainer, ["12 2"], 70, 2000, 70);
 }
 function gameplayStart() {
     
     fadeOut(document.querySelector('.cut-scene-container'));
     fadeIn(document.querySelector('.overlay_screen'));
+    setAllShipRandom();
     setTimeout(function(){
         document.querySelector('.wrapper-gameplay').style.display = 'block';
         fadeOut(document.querySelector('.overlay_screen'));
