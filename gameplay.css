@@ -112,6 +112,12 @@ aside {
         width: 21.250rem;
         position: relative;
     }
+    .damaged {
+        background-size: 18.223rem;
+    }
+    .destroyed {
+        background-size: 1.563rem;
+    }
 }
 
 @media (max-width: 667px) {

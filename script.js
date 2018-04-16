@@ -149,9 +149,10 @@ function gameplayStart() {
     
     fadeOut(document.querySelector('.cut-scene-container'));
     fadeIn(document.querySelector('.overlay_screen'));
+    document.querySelector('.wrapper-gameplay').style.display = 'flex';
     setAllShipRandom();
     setTimeout(function(){
-        document.querySelector('.wrapper-gameplay').style.display = 'flex';
+        
         fadeOut(document.querySelector('.overlay_screen'));
     }, 2000);
     
