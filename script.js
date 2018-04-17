@@ -154,7 +154,7 @@ function gameplayStart() {
     setTimeout(function(){
         
         fadeOut(document.querySelector('.overlay_screen'));
-    }, 2000);
+    }, 1000);
     
 }
 function setDemarkDestroyedShip(currentX, currentY, parent) {
