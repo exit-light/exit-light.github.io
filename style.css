@@ -111,6 +111,7 @@ body {
     flex-wrap: wrap;
     width: 26.250rem;
     position: relative;
+    z-index: 1;
 }
 
 .cell {
@@ -136,17 +137,18 @@ body {
 }
 
 .areaAl .overlay {
-    background: rgba(0, 0, 0, 0.28);
+    background: rgba(0, 0, 0, 0.0);
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     display: none;
+    z-index: 5;
 }
 
 .tried {
-    animation: playWater 1.4s steps(1) forwards;
+    animation: playWater .8s steps(1) forwards;
     background-size: 150px;
     background-image: url('water-splashes.jpg');
 }
