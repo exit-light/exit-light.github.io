@@ -146,7 +146,7 @@ body {
 }
 
 .tried {
-    animation: playWater .4s steps(1) forwards;
+    animation: playWater 1.4s steps(1) forwards;
     background-size: 150px;
     background-image: url('water-splashes.jpg');
 }

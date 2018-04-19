@@ -98,7 +98,7 @@ aside {
     color: #946806;
     margin: 2rem 0;
 }
-
+/*
 @media (max-width: 1210px) {
     .cell {
         width: 1.563rem;
@@ -119,7 +119,7 @@ aside {
         background-size: 1.563rem;
     }
 }
-
+*/
 @media (max-width: 667px) {
     .wrapper_areas {
         justify-content: space-around;
