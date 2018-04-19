@@ -115,9 +115,9 @@ body {
 }
 
 .cell {
-    width: 2.188rem;
+    width: 30px;
+    height: 30px;
     margin: 2px;
-    height: 2.188rem;
     background-color: #fafdff;
     /*display: inline-block;*/
     cursor: pointer;
@@ -149,57 +149,58 @@ body {
 
 .tried {
     animation: playWater .8s steps(1) forwards;
-    background-size: 150px;
+    background-size: 493%;
     background-image: url('water-splashes.jpg');
 }
 @keyframes playWater {
     0% {
-      background-position: 0px 0px;
+      /*background-position: -4px -3px;*/
+      background-position: 2.5% 2.5%;
     }
     6.25% {
-      background-position: -37px 0;
+      background-position: 34% 2.5%;
     }
     12.5% {
-      background-position: -74px 0;
+      background-position: 64% 2.5%;
     }
     18.75% {
-      background-position: -111px 0;
+      background-position: 97.5% 2.5%;
     }
     25% {
-      background-position: 0px -38px;
+      background-position: 3% 33.5%;
     }
     31.25% {
-      background-position: -37px -38px;
+      background-position: 34% 33.5%;
     }
     37.5% {
-      background-position: -74px -38px;
+      background-position: 65% 33.5%;
     }
     43.75% {
-      background-position: -111px -38px;
+      background-position: 97% 33.5%;
     }
     50% {
-      background-position: 0px -76px;
+      background-position: 3% 65.5%;
     }
     56.25% {
-      background-position: -37px -76px;
+      background-position: 34% 65.5%;
     }
     62.5% {
-      background-position: -74px -76px;
+      background-position: 65% 65.5%;
     }
     68.75% {
-      background-position: -111px -76px;
+      background-position: 97% 65.5%;
     }
     75% {
-      background-position: 0px -113px;
+      background-position: 3% 95.5%;
     }
     81.25% {
-      background-position: -37px -113px;
+      background-position: 34% 95.5%;
     }
     87.5% {
-      background-position: -74px -113px;
+      background-position: 65% 95.5%;
     }
     93.75% {
-      background-position: -111px -113px;
+      background-position: 97% 95.5%;
     }
     100% {
       background-color: rgb(43, 93, 121);

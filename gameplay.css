@@ -104,6 +104,7 @@ aside {
         animation: unset;
     }
 }
+/*
 @media (max-width: 1210px) {
     .cell {
         width: 1.563rem;
@@ -124,7 +125,7 @@ aside {
         background-size: 1.563rem;
     }
 }
-
+*/
 @media (max-width: 667px) {
     .wrapper_areas {
         justify-content: space-around;
