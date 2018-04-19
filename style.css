@@ -109,7 +109,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 26.250rem;
+    width: 23rem;
     position: relative;
     z-index: 1;
 }
@@ -148,7 +148,7 @@ body {
 }
 
 .tried {
-    animation: playWater .8s steps(1) forwards;
+    animation: playWater .5s steps(1) forwards;
     background-size: 493%;
     background-image: url('water-splashes.jpg');
 }
