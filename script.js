@@ -139,11 +139,11 @@ function introStart() {
     document.body.classList.add('bg-black-screen');
     
     document.body.insertAdjacentHTML('beforeend',
-        '<div class="cut-scene-container"><div class="cut-scene-container__avatar-block"><div class="cut-scene-container__avatar-block__avatar"><img src="rus.png"></div><div class="cut-scene-container__avatar-block__avatar"><img src="enemy_avatar.png"></div></div><div class="cut-scene-container__textblock"></div></div>'
+        '<div class="cut-scene-container"><div class="cut-scene-container__avatar-block"><div class="cut-scene-container__avatar-block__avatar"><img src="enemy_avatar.png"></div><div class="cut-scene-container__avatar-block__avatar"><img src="enemy_avatar.png"></div></div><div class="cut-scene-container__textblock"></div></div>'
     );
     
     var textContainer = document.querySelector(".cut-scene-container__textblock");
-    typeText(textContainer, ["Руслан соси песос!!"], 70, 2000, 70);
+    typeText(textContainer, ["Враг татакует!!"], 70, 2000, 70);
 }
 function gameplayStart() {
     
