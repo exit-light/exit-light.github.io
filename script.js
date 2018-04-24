@@ -157,6 +157,9 @@ function gameplayStart() {
     }, 1000);
     
 }
+function notificationSet(notificationText) {
+    document.querySelector('.notifications-block').innerText = notificationText;
+}
 function setDemarkDestroyedShip(currentX, currentY, parent) {
     var variationDirections = [
         '[data-x="' + (currentX + 1) + '"][data-y="' + currentY + '"]',
