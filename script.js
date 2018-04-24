@@ -204,7 +204,8 @@ function attackAl(parent) { // поведение Al при атаке
                     setTimeout(function() { attackAl('.areaPl') }, 1000);
                 } else {
                     currentAttackedShip = attackedCell.getAttribute('data-ship-type'); // определяет тип корабля в который попал AL для определния оставшихся клеток которые надо найти
-                    alert('Попадание в ' + currentAttackedShip + 'палублный корабль');
+                    //alert('Попадание в ' + currentAttackedShip + 'палублный корабль');
+                    notificationSet('Враг попал в наш ' + currentAttackedShip + 'палублный корабль');
                     currentAttackedShip--;
                     alTurnStatus = "search"; // на следующем шаге ищем рядом
                     setTimeout(function() { attackAl('.areaPl') }, 1000);
@@ -252,7 +253,8 @@ function attackAl(parent) { // поведение Al при атаке
             document.querySelector('.hitAlCount').innerHTML = ++hitAlCount; //прибавляем счет очков попаданий
             currentAttackedShip--;
             if (currentAttackedShip === 0) {
-                alert('Ваш корабль полностью уничтожен');
+                //alert('Ваш корабль полностью уничтожен');
+                notificationSet('Ваш корабль полностью уничтожен');
                 setDemarkDestroyedShip(cellX, cellY, '.areaPl');
                 setDemarkDestroyedShip(cellXSearch, cellYSearch, '.areaPl');
                 document.querySelector('.destrAlCount').textContent = ++destrAlCount; //прибавляем счет подбитых кораблей компом
@@ -296,7 +298,8 @@ function attackAl(parent) { // поведение Al при атаке
                 document.querySelector('.hitAlCount').innerHTML = ++hitAlCount; //прибавляем счет очков попаданий
                 currentAttackedShip--;
                 if (currentAttackedShip === 0) {
-                    alert('Ваш корабль полностью уничтожен');
+                    //alert('Ваш корабль полностью уничтожен');
+                    notificationSet('Ваш корабль полностью уничтожен');
                     setDemarkDestroyedShip(cellX, cellY, '.areaPl');
                     setDemarkDestroyedShip(cellXSearch, cellYSearch, '.areaPl');
                     setDemarkDestroyedShip(cellXNext, cellYNext, '.areaPl');
@@ -338,7 +341,8 @@ function attackAl(parent) { // поведение Al при атаке
                 document.querySelector('.hitAlCount').innerHTML = ++hitAlCount; //прибавляем счет очков попаданий
                 currentAttackedShip--;
                 if (currentAttackedShip === 0) {
-                    alert('Ваш корабль полностью уничтожен');
+                    //alert('Ваш корабль полностью уничтожен');
+                    notificationSet('Ваш корабль полностью уничтожен');
                     setDemarkDestroyedShip(cellX, cellY, '.areaPl');
                     setDemarkDestroyedShip(cellXSearch, cellYSearch, '.areaPl');
                     setDemarkDestroyedShip(cellXNext, cellYNext, '.areaPl');
@@ -383,7 +387,8 @@ function attackAl(parent) { // поведение Al при атаке
                 document.querySelector('.hitAlCount').innerHTML = ++hitAlCount; //прибавляем счет очков попаданий
                 currentAttackedShip--;
                 if (currentAttackedShip === 0) {
-                    alert('Ваш корабль полностью уничтожен');
+                    //alert('Ваш корабль полностью уничтожен');
+                    notificationSet('Ваш корабль полностью уничтожен');
                     setDemarkDestroyedShip(cellX, cellY, '.areaPl');
                     setDemarkDestroyedShip(cellXSearch, cellYSearch, '.areaPl');
                     setDemarkDestroyedShip(cellXNext, cellYNext, '.areaPl');
@@ -424,7 +429,8 @@ function attackAl(parent) { // поведение Al при атаке
                 document.querySelector('.hitAlCount').innerHTML = ++hitAlCount; //прибавляем счет очков попаданий
                 currentAttackedShip--;
                 if (currentAttackedShip === 0) {
-                    alert('Ваш корабль полностью уничтожен');
+                    //alert('Ваш корабль полностью уничтожен');
+                    notificationSet('Ваш корабль полностью уничтожен');
                     setDemarkDestroyedShip(cellX, cellY, '.areaPl');
                     setDemarkDestroyedShip(cellXSearch, cellYSearch, '.areaPl');
                     setDemarkDestroyedShip(cellXNext, cellYNext, '.areaPl');
@@ -475,6 +481,7 @@ function attackPl() {
     this.setAttribute('data-attacked', 'yes');
     this.classList.add('tried');
     if (this.getAttribute('data-ship-availability') === 'yes') {
+        notificationSet('Вы ранили вражеский корабль');
         hitSoundPlay();
         this.classList.remove('tried');
         this.classList.add('damaged');
@@ -483,7 +490,8 @@ function attackPl() {
         var dataIdShip = this.getAttribute('data-id-ship');
         if ((document.querySelectorAll('.areaAl .cell[data-id-ship="' + dataIdShip + '"][data-attacked="no"]').length) == 0) {
             document.querySelector('.destrPlCount').textContent = ++destrPlCount; //прибавляем счет подбитых кораблей игркоком
-            alert('Вы размудохали вражеский корабль');
+            //alert('Вы размудохали вражеский корабль');
+            notificationSet('Вы размудохали вражеский корабль');
             [].forEach.call(document.querySelectorAll('.areaAl .cell[data-id-ship="' + dataIdShip + '"]'), function(el) {
                 el.classList.add('destroyed');
             });
