@@ -476,6 +476,7 @@ function attackPl() {
     this.classList.add('tried');
     if (this.getAttribute('data-ship-availability') === 'yes') {
         hitSoundPlay();
+        this.classList.remove('tried');
         this.classList.add('damaged');
         document.querySelector('.hitPlCount').textContent = ++hitPlCount; //прибавляем счет очков попаданий игрока
         //Если у других клеток с тем же ID данного подбитого корабля больше нет атрибута data-attacked="no" (клетки которые еще не были подбиты), то отметить корабль с данным ID как убил
