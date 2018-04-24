@@ -184,10 +184,10 @@ body {
     }
     
     100% {
-      background-color: #1f5079;
+      background-color: #417097;
       background-image: url('https://cdn2.iconfinder.com/data/icons/pixel-art-large/100/PixelArtIcons-14-512.png');
       background-repeat: no-repeat;
-      background-size: contain; 
+      background-size: cover; 
       background-position: center center;
       animation: unset;
     }
