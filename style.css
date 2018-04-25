@@ -145,12 +145,11 @@ body {
     display: none;
     z-index: 5;
 }
-/*
+
 .tried {
     animation: playWaterEdit .6s steps(1) forwards;
     background-image: url('water-splashes-m.png');
 }
-*/
 @keyframes playWaterEdit {
   
     0% {
@@ -193,8 +192,12 @@ body {
     }
   }
 .damaged {
+    /*
     background-image: url('ship-explosive-m.png');
     animation: explosive2 .7s steps(1) forwards;
+    */
+    animation: playWaterEdit .6s steps(1) infinite;
+    background-image: url('water-splashes-m.png');
 }
 @keyframes explosive2 {
     0% {
