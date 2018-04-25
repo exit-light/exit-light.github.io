@@ -199,6 +199,7 @@ function attackAl(parent) { // поведение Al при атаке
                 document.querySelector('.hitAlCount').innerHTML = ++hitAlCount; //прибавляем счет очков попаданий
                 if (attackedCell.getAttribute('data-ship-type') === '1') { //если попал в однопалубник
                     setDemarkDestroyedShip(cellX, cellY, '.areaPl');
+                    attackedCell.classList.add('fire2');
                     document.querySelector('.destrAlCount').textContent = ++destrAlCount; //прибавляем счет подбитых кораблей компом
                     alTurnStatus = "default"; // на следующем шаге ищем по новой
                     setTimeout(function() { attackAl('.areaPl') }, 1000);
