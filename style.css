@@ -22,7 +22,62 @@ body {
     image-rendering: pixelated;
     -ms-interpolation-mode: nearest-neighbor;
 }
+h1 {
+    height: 100px;
+    text-align: center;
+    margin: 3rem 0 1rem;
+}
 
+h1 span {
+    position: relative;
+    top: 5px;
+    display: inline-block;
+    /*animation: bounce 0.3s ease infinite alternate;*/
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc, 0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent, 0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+h1 span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+h1 span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+h1 span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+h1 span:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+h1 span:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+h1 span:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+h1 span:nth-child(8) {
+    animation-delay: 0.7s;
+}
+
+h1 span:nth-child(9) {
+    animation-delay: 0.8s;
+}
+
+h1 span:nth-child(10) {
+    animation-delay: 0.9s;
+}
+
+h1 span:nth-child(11) {
+    animation-delay: 1s;
+}
 .bg-black-screen {
     background-color: #000;
 }
@@ -145,10 +200,25 @@ body {
     display: none;
     z-index: 5;
 }
-
+.damaged {
+    animation: explosive2 .6s steps(1) infinite;
+    background-image: url('xxx.jpg');
+}
 .tried {
     animation: playWaterEdit .6s steps(1) forwards;
     background-image: url('water-splashes-m.png');
+}
+.destroyed {
+    background-color: rgb(161, 86, 0)!important;
+    background-image: url('fire.gif');
+    background-size: 1.563rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    animation: unset;
+}
+.fire2 {
+    animation: xfire 1s steps(6) infinite, yfire 1s steps(5) infinite;
+    background-image: url('https://s3.amazonaws.com/feather-client-files-aviary-prod-us-east-1/2018-04-24/001d11b1-4172-40cf-857d-36be805738b8.png');
 }
 @keyframes playWaterEdit {
   
@@ -191,12 +261,7 @@ body {
       animation: unset;
     }
   }
-.damaged {
-    /*background-image: url('ship-explosive-m.png');*/
-    /*animation: explosive3 .6s steps(1) infinite;*/
-    animation: explosive2 .6s steps(1) forwards;
-    background-image: url('https://pp.userapi.com/c840334/v840334230/783e5/j4a52mmiNGM.jpg');
-}
+
 @keyframes explosive2 {
     0% {
       background-position: -1px -1px;
@@ -238,59 +303,8 @@ body {
         animation: unset; 
     }
   }
-  @keyframes explosive3 {
-    0% {
-      background-position: -1px -31px;
-    }
-    10% {
-      background-position: -31px -31px;
-    }
-    20% {
-      background-position: -61px -31px;
-    }
-    30% {
-      background-position: -61px -31px;
-    }
-    40% {
-      background-position: -91px -31px;
-    }
-    50% {
-      background-position: -121px -31px;
-    }
-    60% {
-      background-position: -151px -31px;
-    }
-    70% {
-      background-position: -181px -31px;
-    }
-    80% {
-      background-position: -211px -31px;
-    }
-    90% {
-      background-position: -241px -31px;
-    }
-    
-    100% {
-        background-color: #b3180d;
-        /*background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI3Ljk2NSAyNy45NjUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI3Ljk2NSAyNy45NjU7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4Ij4KPGc+Cgk8ZyBpZD0iYzE0Ml94Ij4KCQk8cGF0aCBkPSJNMTMuOTgsMEM2LjI1OSwwLDAsNi4yNjEsMCwxMy45ODNjMCw3LjcyMSw2LjI1OSwxMy45ODIsMTMuOTgsMTMuOTgyYzcuNzI1LDAsMTMuOTg1LTYuMjYyLDEzLjk4NS0xMy45ODIgICAgQzI3Ljk2NSw2LjI2MSwyMS43MDUsMCwxMy45OCwweiBNMTkuOTkyLDE3Ljc2OWwtMi4yMjcsMi4yMjRjMCwwLTMuNTIzLTMuNzgtMy43ODYtMy43OGMtMC4yNTksMC0zLjc4MywzLjc4LTMuNzgzLDMuNzggICAgbC0yLjIyOC0yLjIyNGMwLDAsMy43ODQtMy40NzIsMy43ODQtMy43ODFjMC0wLjMxNC0zLjc4NC0zLjc4Ny0zLjc4NC0zLjc4N2wyLjIyOC0yLjIyOWMwLDAsMy41NTMsMy43ODIsMy43ODMsMy43ODIgICAgYzAuMjMyLDAsMy43ODYtMy43ODIsMy43ODYtMy43ODJsMi4yMjcsMi4yMjljMCwwLTMuNzg1LDMuNTIzLTMuNzg1LDMuNzg3QzE2LjIwNywxNC4yMzksMTkuOTkyLDE3Ljc2OSwxOS45OTIsMTcuNzY5eiIgZmlsbD0iI0ZGRkZGRiIvPgoJPC9nPgoJPGcgaWQ9IkNhcGFfMV8xMDRfIj4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);*/
-        background-repeat: no-repeat;
-        background-image: none;
-        background-position: center center;
-        animation: unset; 
-    }
-}
-.destroyed {
-    background-color: rgb(161, 86, 0)!important;
-    background-image: url('fire.gif');
-    background-size: 1.563rem;
-    background-repeat: no-repeat;
-    background-position: center center;
-    animation: unset;
-}
-.fire2 {
-    animation: xfire 1s steps(6) infinite, yfire 1s steps(5) infinite;
-    background-image: url('https://s3.amazonaws.com/feather-client-files-aviary-prod-us-east-1/2018-04-24/001d11b1-4172-40cf-857d-36be805738b8.png');
-}
+  
+
   @keyframes xfire {
     from {
       background-position-x: -0px;
@@ -309,62 +323,7 @@ body {
       
     }
   }
-h1 {
-    height: 100px;
-    text-align: center;
-    margin: 3rem 0 1rem;
-}
 
-h1 span {
-    position: relative;
-    top: 5px;
-    display: inline-block;
-    /*animation: bounce 0.3s ease infinite alternate;*/
-    font-family: 'Press Start 2P', cursive;
-    font-size: 2rem;
-    color: #fff;
-    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc, 0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent, 0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
-}
-
-h1 span:nth-child(2) {
-    animation-delay: 0.1s;
-}
-
-h1 span:nth-child(3) {
-    animation-delay: 0.2s;
-}
-
-h1 span:nth-child(4) {
-    animation-delay: 0.3s;
-}
-
-h1 span:nth-child(5) {
-    animation-delay: 0.4s;
-}
-
-h1 span:nth-child(6) {
-    animation-delay: 0.5s;
-}
-
-h1 span:nth-child(7) {
-    animation-delay: 0.6s;
-}
-
-h1 span:nth-child(8) {
-    animation-delay: 0.7s;
-}
-
-h1 span:nth-child(9) {
-    animation-delay: 0.8s;
-}
-
-h1 span:nth-child(10) {
-    animation-delay: 0.9s;
-}
-
-h1 span:nth-child(11) {
-    animation-delay: 1s;
-}
 
 @keyframes bounce {
     100% {
