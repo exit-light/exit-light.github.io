@@ -145,11 +145,12 @@ body {
     display: none;
     z-index: 5;
 }
-
+/*
 .tried {
     animation: playWaterEdit .6s steps(1) forwards;
     background-image: url('water-splashes-m.png');
 }
+*/
 @keyframes playWaterEdit {
   
     0% {
