@@ -192,8 +192,10 @@ body {
     }
   }
 .damaged {
-    background-image: url('ship-explosive-m.png');
-    animation: explosive3 .6s steps(1) infinite;
+    /*background-image: url('ship-explosive-m.png');*/
+    /*animation: explosive3 .6s steps(1) infinite;*/
+    animation: explosive2 .6s steps(1) forwards;
+    background-image: url('https://pp.userapi.com/c840334/v840334230/783e5/j4a52mmiNGM.jpg');
 }
 @keyframes explosive2 {
     0% {
