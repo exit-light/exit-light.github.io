@@ -208,7 +208,7 @@ function attackAl(parent) { // поведение Al при атаке
                 } else {
                     currentAttackedShip = attackedCell.getAttribute('data-ship-type'); // определяет тип корабля в который попал AL для определния оставшихся клеток которые надо найти
                     //alert('Попадание в ' + currentAttackedShip + 'палублный корабль');
-                    notificationSet('Враг попал в наш ' + currentAttackedShip + 'палублный корабль');
+                    notificationSet('Враг попал в наш ' + currentAttackedShip + '-ёх палублный корабль');
                     currentAttackedShip--;
                     alTurnStatus = "search"; // на следующем шаге ищем рядом
                     setTimeout(function() { attackAl('.areaPl') }, 1000);
@@ -398,13 +398,11 @@ function attackAl(parent) { // поведение Al при атаке
                     document.querySelector('.destrAlCount').textContent = ++destrAlCount; //прибавляем счет подбитых кораблей компом
                     alTurnStatus = "default";
                 }
-                if (currentAttackedShip > 0) {
-                    alTurnStatus = "attackStep4";
-                }
+                
                 setTimeout(function() { attackAl('.areaPl') }, 1000);
                 return;
             } else {
-                alTurnStatus === "default";
+                alTurnStatus === "attackStep4";
                 document.querySelector('.overlay').style.display = 'none';
             }
             return;
@@ -440,14 +438,11 @@ function attackAl(parent) { // поведение Al при атаке
                     document.querySelector('.destrAlCount').textContent = ++destrAlCount; //прибавляем счет подбитых кораблей компом
                     alTurnStatus = "default";
                 }
-                if (currentAttackedShip > 0) {
-
-                    alTurnStatus = "attackStep4";
-                }
+                
                 setTimeout(function() { attackAl('.areaPl') }, 1000);
                 return;
             } else {
-                alTurnStatus === "next";
+                alTurnStatus === "attackStep4";
                 document.querySelector('.overlay').style.display = 'none';
             }
             return;
