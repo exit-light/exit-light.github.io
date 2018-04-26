@@ -192,7 +192,7 @@ body {
     }
   }
 .damaged {
-    background-image: url('ship-explosive-m.png');
+    
     /*animation: explosive2 .6s steps(1) forwards;*/
     animation: playYY2 .7s steps(9) forwards, playXX2 .7s steps(9) forwards;
 }
@@ -279,24 +279,34 @@ body {
     }
 }
 @keyframes playXX2 {
-  from {
+  0% {
     background-position-x: -1px;
+    background-image: url('ship-explosive-m.png');
     
   }
-  to {
+  99% {
     background-position-x: -271px;
+    background-image: url('ship-explosive-m.png');
     
+  }
+  100% {
+    background-image: none;
+    background-color: #bf2323;
   }
 }
 
 @keyframes playYY2 {
-  from {
+  0% {
     background-position-y: -1px;
+    background-image: url('ship-explosive-m.png');
   }
-  to {
+  99% {
     background-position-y: -271px;
-    /*background-image: none;*/
+    background-image: url('ship-explosive-m.png');
     animation: unset;
+  }
+  100% {
+    background-image: none;
     background-color: #bf2323;
   }
 }
