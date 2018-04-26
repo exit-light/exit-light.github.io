@@ -94,9 +94,11 @@ function fadeOut(el){
     })();
   };
 function hitSoundPlay() {
+    /*
     document.querySelector(".hit_sound").volume = 0.3;
     document.querySelector(".hit_sound").stop();
     document.querySelector(".hit_sound").play();
+    */
 }
 HTMLAudioElement.prototype.stop = function() {
     this.pause();
@@ -143,7 +145,7 @@ function introStart() {
     );
     
     var textContainer = document.querySelector(".cut-scene-container__textblock");
-    typeText(textContainer, ["Враг татакует!!"], 70, 2000, 70);
+    typeText(textContainer, ["Враг атакует!!"], 70, 2000, 70);
 }
 function gameplayStart() {
     
