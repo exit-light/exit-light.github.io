@@ -109,7 +109,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 23rem;
+    width: 340px;
     position: relative;
     z-index: 1;
 }
