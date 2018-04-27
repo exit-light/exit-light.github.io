@@ -68,30 +68,31 @@
                 <main class="main">
                     <div class="notifications-block">Начнем дырявить пиратские байдарки! Огонь!</div>
                     <div class="wrapper_areas">
-                        <div class="areaAl"></div>
                         <div class="areaPl"></div>
+                        <div class="areaAl"></div>
                     </div>
                 </main>
                 <aside class="sidebar-first">
                     <h5 class="aside__title">Наши</h5>
                     <span class="avatar" data-toggle="tooltip" href="#" data-placement="right" title="" data-original-title="">
-                    <img src="enemy_avatar.png" >
-                </span>
+                        <img src="enemy_avatar.png" >
+                    </span>
                     <div class="aside__counter">Ход: <span class="turnCountPl">0</span></div>
                     <div class="aside__counter">Очков: <span class="hitPlCount">0</span></div>
                     <div class="aside__counter">Убил: <span class="destrPlCount">0</span></div>
-                    <button class="randomSet" onclick="setAllShipRandom();" style='display: block; padding: 20px 10px; margin: 10px 0;'>Разместить</button>
+                    <button class="attackButton" onclick="attackAl('.areaPl');" style='display: block; padding: 20px 10px;margin: 10px 0;'>Attack random</button>
+                    
                     
                 </aside>
                 <aside class="sidebar-second">
                     <h5 class="aside__title">Враги</h5>
                     <span class="avatar" data-toggle="tooltip" href="#" data-placement="right" title="" data-original-title="">
-                    <img src="enemy_avatar.png" >
-                </span>
+                        <img src="enemy_avatar.png" >
+                    </span>
                     <div class="aside__counter">Ход: <span class="turnCountAl">0</span></div>
                     <div class="aside__counter">Очков: <span class="hitAlCount">0</span></div>
                     <div class="aside__counter">Убил: <span class="destrAlCount">0</span></div>
-                    <button class="attackButton" onclick="attackAl('.areaPl');" style='display: block; padding: 20px 10px;margin: 10px 0;'>Attack random</button>
+                    <button class="randomSet" onclick="setAllShipRandom();" style='display: block; padding: 20px 10px; margin: 10px 0;'>Разместить</button>
                 </aside>
             </div>
         </section>

@@ -8,7 +8,8 @@
 .header,
 .footer {
     height: 50px;
-    background: #666;
+    background-color: #a17c00;
+    background-image: url("https://www.transparenttextures.com/patterns/tileable-wood.png");
     color: #fff;
 }
 

@@ -112,6 +112,7 @@ body {
     width: 340px;
     position: relative;
     z-index: 1;
+    
 }
 
 .cell {
@@ -144,6 +145,7 @@ body {
     right: 0;
     display: none;
     z-index: 5;
+    cursor: not-allowed;
 }
 
 .tried {
