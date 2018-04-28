@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="gameplay.css"/>
     <link rel="preload" href="bg-title.gif" as="image">
     <link rel="preload" href="oceano.gif" as="image">
+    <link rel="preload" href="Alestorm_Shipwrecked_8bitconv2.mp3" as="audio">
 </head>
 
 <body class="bg-title-screen">
@@ -61,7 +62,13 @@
     </div>
     <div class="wrapper-gameplay" style="display:none">
         <header class="header">
-            
+            <div class="music-volume-control">
+                <span class="music-volume-control_levels volume_0">0</span>
+                <span class="music-volume-control_levels volume_1">1</span>
+                <span class="music-volume-control_levels volume_2">2</span>
+                <span class="music-volume-control_levels volume_3">3</span>
+                <span class="music-volume-control_levels volume_4">4</span>
+            </div>
         </header>
         <section class="content">
             <div class="columns">
@@ -99,6 +106,7 @@
         <footer class="footer">Footer: Fixed height</footer>
     </div>
     <audio class="hit_sound" src="hit.mp3"></audio>
+    <audio class="song" src="Alestorm_Shipwrecked_8bitconv2.mp3"></audio>
     <script src="script.js"></script>
 </body>
 

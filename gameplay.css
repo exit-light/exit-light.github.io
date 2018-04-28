@@ -9,7 +9,10 @@
 .footer {
     height: 50px;
     background-color: #a17c00;
-    background-image: url("https://www.transparenttextures.com/patterns/tileable-wood.png");
+    background-image: url('https://i.pinimg.com/564x/3c/36/4e/3c364e0d605a104174b0c4e17d8d9db0.jpg');
+    /*background-image: url('https://cdnb.artstation.com/p/assets/images/images/004/682/457/large/simon-sanchez-madera-tilex1.jpg?1485480359');*/
+    background-size: 65px;
+    /*background-size: contain;*/
     color: #fff;
 }
 
@@ -94,10 +97,13 @@ aside {
 }
 
 .notifications-block {
-    font-size: 2rem;
+    font-size: 1rem;
     text-align: center;
     color: #946806;
     margin: 2rem 0;
+}
+.music-turn-icon {
+  background-image: url("data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMi4wMjQgNTEyLjAyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyLjAyNCA1MTIuMDI0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNMzQ3LjIxMiwxMDAuODEybC05Ni05NmMtNC40OC00LjgtMTEuMi02LjA4LTE3LjI4LTMuNTJjLTYuMDgsMi41Ni05LjkyLDguMzItOS45MiwxNC43MnY0OGgtMTYgICAgYy0xMjMuNTIsMC0yMjIuNzIsMTA4LjgtMjA2LjA4LDIzNS41MmM2LjM2OCw0OS41MzYsMzAuNTkyLDkyLjI1Niw2NS43NiwxMjMuOTA0YzYuMjA4LDUuNiwxNS45MzYsNC45NiwyMS44NTYtMC45Nmw0NC40OC00NC40OCAgICBjNi4zNjgtNi4zNjgsNi40MzItMTYuODk2LTAuMzUyLTIyLjgxNmMtMTcuNTM2LTE1LjIzMi0zMC4xNzYtMzUuNzQ0LTM1LjEwNC01OS44MDhjLTE1LjA0LTcyLDQwLTEzNS4zNiwxMDkuNDQtMTM1LjM2aDE2djQ4ICAgIGMwLDYuNCwzLjg0LDEyLjE2LDkuOTIsMTQuNzJjNi4wOCwyLjU2LDEyLjgsMS4yOCwxNy4yOC0zLjUybDk2LTk2QzM1My42MTIsMTE3LjEzMiwzNTMuNjEyLDEwNi44OTIsMzQ3LjIxMiwxMDAuODEyeiIgZmlsbD0iIzk0NTQwMCIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTUxMC4wOTIsMjEyLjQ5MmMtNi4zNjgtNDkuNTM2LTMwLjU5Mi05Mi4yODgtNjUuNzYtMTIzLjkwNGMtNi4yMDgtNS42LTE1LjkzNi00Ljk2LTIxLjg1NiwwLjk2bC00NC40OCw0NC40OCAgICBjLTYuMzY4LDYuMzY4LTYuNDMyLDE2Ljg5NiwwLjM1MiwyMi44MTZjMTcuNTA0LDE1LjI2NCwzMC4xNzYsMzUuNzc2LDM1LjEwNCw1OS44MDhjMTUuMDQsNzItNDAsMTM1LjM2LTEwOS40NCwxMzUuMzZoLTE2di00OCAgICBjMC02LjQtMy44NC0xMi4xNi05LjkyLTE0Ljcycy0xMi44LTEuMjgtMTcuMjgsMy41MmwtOTYsOTZjLTYuNCw2LjA4LTYuNCwxNi4zMiwwLDIyLjRsOTYsOTZjNC40OCw0LjgsMTEuMiw2LjA4LDE3LjI4LDMuNTIgICAgYzYuMDgtMi41Niw5LjkyLTguMzIsOS45Mi0xNC43MnYtNDhoMTZDNDI3LjUzMiw0NDguMDEyLDUyNi43MzIsMzM5LjIxMiw1MTAuMDkyLDIxMi40OTJ6IiBmaWxsPSIjOTQ1NDAwIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==");  
 }
 /*
 @media (pointer:coarse){

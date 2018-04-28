@@ -130,6 +130,7 @@ body {
 
 .area {
     margin: 50px 0;
+    padding: 0 2rem;
 }
 
 .areaPl .cell-engaged {
@@ -147,7 +148,11 @@ body {
     z-index: 5;
     cursor: not-allowed;
 }
-
+.music-volume-control_levels {
+  margin: 0 3px;
+  cursor: pointer;
+  color: orange;
+}
 .tried {
     animation: playWaterEdit .6s steps(1) forwards;
     background-image: url('water-splashes-m.png');
