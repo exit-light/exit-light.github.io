@@ -15,7 +15,9 @@
     /*background-size: contain;*/
     color: #fff;
 }
-
+.header_inner {
+    display: flex;
+}
 .content {
     display: flex;
     flex: 1;

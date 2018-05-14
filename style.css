@@ -56,7 +56,9 @@ body {
     color: #00b6ff;
     text-decoration: none;
 }
-
+.title-menu__music-option {
+  cursor: pointer;
+}
 .startBtn {
     padding: 10px;
     background-color: #d63131;

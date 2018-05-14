@@ -56,19 +56,19 @@
                 на расстановку своего флота: за вас это сделает программа в случайном порядке при каждом новом старте игры либо, по нажатии на кнопку ? во время игры.
             </p>
 
-            <div class="title-menu__music-option">МУЗЫКА: <span> ВКЛ.</span></div>
+            <div class="title-menu__music-option">МУЗЫКА: <span class="title-menu__music-option-turn"> ВКЛ.</span></div>
             <div onclick="startGame()" class="startBtn">Стартуем!</div>
         </div>
     </div>
     <div class="wrapper-gameplay" style="display:none">
         <header class="header">
-            <div class="music-volume-control">
-                <span class="music-volume-control_levels volume_0">0</span>
-                <span class="music-volume-control_levels volume_1">1</span>
-                <span class="music-volume-control_levels volume_2">2</span>
-                <span class="music-volume-control_levels volume_3">3</span>
-                <span class="music-volume-control_levels volume_4">4</span>
+            <div class="header_inner">
+                <div class="music-volume-control">
+                    <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDYwIDYwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA2MCA2MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIzMnB4IiBoZWlnaHQ9IjMycHgiPgo8cGF0aCBkPSJNMzAsMEMxMy40NTgsMCwwLDEzLjQ1OCwwLDMwczEzLjQ1OCwzMCwzMCwzMHMzMC0xMy40NTgsMzAtMzBTNDYuNTQyLDAsMzAsMHogTTM2LDQ4Ljg5NEMzNiw1MC42MDYsMzQuNjA2LDUyLDMyLjg5Myw1MiAgYy0wLjU0NywwLTEuMDktMC4xNDktMS41NzEtMC40MzJjLTAuMDYzLTAuMDM3LTAuMTIxLTAuMDgxLTAuMTc0LTAuMTMxTDE3LjkwNiwzOS4xMDlDMTcuNzU2LDM5LjAzNywxNy41OTMsMzksMTcuNDI3LDM5SDkuMTA0ICBDNy4zOTIsMzksNiwzNy42MDcsNiwzNS44OTZWMjMuMTA0QzYsMjEuMzkzLDcuMzkyLDIwLDkuMTA0LDIwaDguMzI0YzAuMTY2LDAsMC4zMjktMC4wMzcsMC40NzktMC4xMDlMMzEuMTQ4LDcuNTYzICBjMC4wNTMtMC4wNSwwLjExMi0wLjA5NCwwLjE3NC0wLjEzMUMzMS44MDMsNy4xNDksMzIuMzQ2LDcsMzIuODkzLDdDMzQuNjA2LDcsMzYsOC4zOTQsMzYsMTAuMTA2VjQ4Ljg5NHogTTM5LDM5ICBjLTAuMjU2LDAtMC41MTItMC4wOTgtMC43MDctMC4yOTNjLTAuMzkxLTAuMzkxLTAuMzkxLTEuMDIzLDAtMS40MTRjNC4yOTctNC4yOTcsNC4yOTctMTEuMjg5LDAtMTUuNTg2ICBjLTAuMzkxLTAuMzkxLTAuMzkxLTEuMDIzLDAtMS40MTRzMS4wMjMtMC4zOTEsMS40MTQsMGM1LjA3Nyw1LjA3Nyw1LjA3NywxMy4zMzcsMCwxOC40MTRDMzkuNTEyLDM4LjkwMiwzOS4yNTYsMzksMzksMzl6ICAgTTQzLjI0OCw0Mi43NDljLTAuMTk1LDAuMTk1LTAuNDUxLDAuMjkzLTAuNzA3LDAuMjkzcy0wLjUxMi0wLjA5OC0wLjcwNy0wLjI5M2MtMC4zOTEtMC4zOTEtMC4zOTEtMS4wMjMsMC0xLjQxNCAgYzYuMjM4LTYuMjM4LDYuMjM4LTE2LjM5LDAtMjIuNjI4Yy0wLjM5MS0wLjM5MS0wLjM5MS0xLjAyMywwLTEuNDE0czEuMDIzLTAuMzkxLDEuNDE0LDBDNTAuMjY2LDI0LjMxMiw1MC4yNjYsMzUuNzMsNDMuMjQ4LDQyLjc0OSAgeiIgZmlsbD0iI2UwZDE5MiIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
+                    <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDYwIDYwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA2MCA2MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIzMnB4IiBoZWlnaHQ9IjMycHgiPgo8Zz4KCTxwYXRoIGQ9Ik01MS43MDcsOC4yOTNjLTAuMzkxLTAuMzkxLTEuMDIzLTAuMzkxLTEuNDE0LDBsLTQyLDQyYy0wLjM5MSwwLjM5MS0wLjM5MSwxLjAyMywwLDEuNDE0QzguNDg4LDUxLjkwMiw4Ljc0NCw1Miw5LDUyICAgczAuNTEyLTAuMDk4LDAuNzA3LTAuMjkzbDQyLTQyQzUyLjA5OCw5LjMxNiw1Mi4wOTgsOC42ODQsNTEuNzA3LDguMjkzeiIgZmlsbD0iI2UwZDE5MiIvPgoJPHBhdGggZD0iTTUyLjg0MSwxMC41NjFMNDIsMjEuNDAydjI3LjQ5MUM0Miw1MC42MDYsNDAuNjA2LDUyLDM4Ljg5Myw1MmMtMC41NDcsMC0xLjA5LTAuMTQ5LTEuNTcxLTAuNDMyICAgYy0wLjA2My0wLjAzNy0wLjEyMS0wLjA4MS0wLjE3NC0wLjEzMUwyNC4xMDYsMzkuMjk2TDEwLjU2MSw1Mi44NDFDMTUuOTgyLDU3LjQ2OSwyMi43OTUsNjAsMzAsNjAgICBjOC4wMTMsMCwxNS41NDctMy4xMjEsMjEuMjEzLTguNzg3UzYwLDM4LjAxMyw2MCwzMEM2MCwyMi43OTUsNTcuNDY5LDE1Ljk4Miw1Mi44NDEsMTAuNTYxeiIgZmlsbD0iI2UwZDE5MiIvPgoJPHBhdGggZD0iTTE1LjEwNCwzOUMxMy4zOTIsMzksMTIsMzcuNjA3LDEyLDM1Ljg5NlYyMy4xMDRDMTIsMjEuMzkzLDEzLjM5MiwyMCwxNS4xMDQsMjBoOC4zMjRjMC4xNjYsMCwwLjMyOS0wLjAzNywwLjQ3OS0wLjEwOSAgIEwzNy4xNDgsNy41NjNjMC4wNTMtMC4wNSwwLjExMi0wLjA5NCwwLjE3NC0wLjEzMUMzNy44MDMsNy4xNDksMzguMzQ2LDcsMzguODkzLDdDNDAuNjA2LDcsNDIsOC4zOTQsNDIsMTAuMTA2djQuNDc5bDcuNDMzLTcuNDMyICAgQzQ0LjAxMywyLjUyOSwzNy4yMDMsMCwzMCwwQzIxLjk4NywwLDE0LjQ1MywzLjEyMSw4Ljc4Nyw4Ljc4N0MzLjEyMSwxNC40NTMsMCwyMS45ODcsMCwzMGMwLDcuMjAyLDIuNTI4LDE0LjAxMyw3LjE1MywxOS40MzIgICBMMTcuNTg2LDM5SDE1LjEwNHoiIGZpbGw9IiNlMGQxOTIiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
+                </div>
             </div>
+            
         </header>
         <section class="content">
             <div class="columns">
