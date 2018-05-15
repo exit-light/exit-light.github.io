@@ -116,7 +116,11 @@ body {
     z-index: 1;
     
 }
-
+.areaDivider {
+  border-left: 1px solid #ab8c46;
+  border-right: 1px solid #ab8c46;
+  margin: 0 .7rem;
+}
 .cell {
     width: 30px;
     height: 30px;
