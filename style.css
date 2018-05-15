@@ -207,39 +207,46 @@ body {
   }
 .damaged {
     
-    /*animation: explosive2 .6s steps(1) forwards;*/
+    /*animation: explosive2 .7s steps(1) forwards;*/
     animation: playYY2 .7s steps(9) forwards, playXX2 .7s steps(9) forwards;
 }
 @keyframes explosive2 {
     0% {
       background-position: -1px -1px;
+      background-image: url('ship-explosive-m.png');
     }
     10% {
       background-position: -31px -31px;
+      background-image: url('ship-explosive-m.png');
     }
     20% {
       background-position: -61px -61px;
+      background-image: url('ship-explosive-m.png');
     }
-    30% {
-      background-position: -61px -61px;
-    }
+    
     40% {
       background-position: -91px -91px;
+      background-image: url('ship-explosive-m.png');
     }
     50% {
       background-position: -121px -121px;
+      background-image: url('ship-explosive-m.png');
     }
     60% {
       background-position: -151px -151px;
+      background-image: url('ship-explosive-m.png');
     }
     70% {
       background-position: -181px -181px;
+      background-image: url('ship-explosive-m.png');
     }
     80% {
       background-position: -211px -211px;
+      background-image: url('ship-explosive-m.png');
     }
     90% {
       background-position: -241px -241px;
+      background-image: url('ship-explosive-m.png');
     }
     
     100% {
