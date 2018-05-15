@@ -115,11 +115,11 @@ document.querySelector('.music-volume-control').addEventListener('click', functi
 function musicTurn(){
 	if (musicTrack.volume === 1) {
         musicTrack.volume = 0;
-        document.querySelector('.title-menu__music-option-turn').innerText = 'ВЫКЛ.';
+        document.querySelector('.title-menu__music-option-turn').innerHTML = 'ВЫКЛ.';
         document.querySelector('.music-volume-control img').src = musicOffIcon;
         
 	} else {
-        document.querySelector('.title-menu__music-option-turn').innerText ='ВКЛ.';
+        document.querySelector('.title-menu__music-option-turn').innerHTML ='ВКЛ.';
         document.querySelector('.music-volume-control img').src = musicOnIcon;
 		musicTrack.volume = 1
 	}
@@ -193,7 +193,7 @@ function gameplayStart() {
     
 }
 function notificationSet(notificationText) {
-    document.querySelector('.notifications-block').innerText = notificationText;
+    document.querySelector('.notifications-block').innerHTML = notificationText;
 }
 function setDemarkDestroyedShip(currentX, currentY, parent) {
     var variationDirections = [

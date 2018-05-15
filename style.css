@@ -126,8 +126,9 @@ body {
     height: 30px;
     margin: 2px;
     background-color: #fafdff;
-    /*display: inline-block;*/
     cursor: pointer;
+    border: 1px solid #666;
+    -moz-box-shadow: 1px 1px #525252de;
     box-shadow: 1px 1px #525252de;
     image-rendering: pixelated;
     border: 1px solid #100e0e99;
