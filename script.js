@@ -35,6 +35,7 @@ var musicTrack = document.querySelector(".song");
 //musicTrack.volume = 1;
 var musicOnIcon = 'data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDYwIDYwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA2MCA2MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIzMnB4IiBoZWlnaHQ9IjMycHgiPgo8cGF0aCBkPSJNMzAsMEMxMy40NTgsMCwwLDEzLjQ1OCwwLDMwczEzLjQ1OCwzMCwzMCwzMHMzMC0xMy40NTgsMzAtMzBTNDYuNTQyLDAsMzAsMHogTTM2LDQ4Ljg5NEMzNiw1MC42MDYsMzQuNjA2LDUyLDMyLjg5Myw1MiAgYy0wLjU0NywwLTEuMDktMC4xNDktMS41NzEtMC40MzJjLTAuMDYzLTAuMDM3LTAuMTIxLTAuMDgxLTAuMTc0LTAuMTMxTDE3LjkwNiwzOS4xMDlDMTcuNzU2LDM5LjAzNywxNy41OTMsMzksMTcuNDI3LDM5SDkuMTA0ICBDNy4zOTIsMzksNiwzNy42MDcsNiwzNS44OTZWMjMuMTA0QzYsMjEuMzkzLDcuMzkyLDIwLDkuMTA0LDIwaDguMzI0YzAuMTY2LDAsMC4zMjktMC4wMzcsMC40NzktMC4xMDlMMzEuMTQ4LDcuNTYzICBjMC4wNTMtMC4wNSwwLjExMi0wLjA5NCwwLjE3NC0wLjEzMUMzMS44MDMsNy4xNDksMzIuMzQ2LDcsMzIuODkzLDdDMzQuNjA2LDcsMzYsOC4zOTQsMzYsMTAuMTA2VjQ4Ljg5NHogTTM5LDM5ICBjLTAuMjU2LDAtMC41MTItMC4wOTgtMC43MDctMC4yOTNjLTAuMzkxLTAuMzkxLTAuMzkxLTEuMDIzLDAtMS40MTRjNC4yOTctNC4yOTcsNC4yOTctMTEuMjg5LDAtMTUuNTg2ICBjLTAuMzkxLTAuMzkxLTAuMzkxLTEuMDIzLDAtMS40MTRzMS4wMjMtMC4zOTEsMS40MTQsMGM1LjA3Nyw1LjA3Nyw1LjA3NywxMy4zMzcsMCwxOC40MTRDMzkuNTEyLDM4LjkwMiwzOS4yNTYsMzksMzksMzl6ICAgTTQzLjI0OCw0Mi43NDljLTAuMTk1LDAuMTk1LTAuNDUxLDAuMjkzLTAuNzA3LDAuMjkzcy0wLjUxMi0wLjA5OC0wLjcwNy0wLjI5M2MtMC4zOTEtMC4zOTEtMC4zOTEtMS4wMjMsMC0xLjQxNCAgYzYuMjM4LTYuMjM4LDYuMjM4LTE2LjM5LDAtMjIuNjI4Yy0wLjM5MS0wLjM5MS0wLjM5MS0xLjAyMywwLTEuNDE0czEuMDIzLTAuMzkxLDEuNDE0LDBDNTAuMjY2LDI0LjMxMiw1MC4yNjYsMzUuNzMsNDMuMjQ4LDQyLjc0OSAgeiIgZmlsbD0iI2UwZDE5MiIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K';
 var musicOffIcon = 'data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDYwIDYwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA2MCA2MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIzMnB4IiBoZWlnaHQ9IjMycHgiPgo8Zz4KCTxwYXRoIGQ9Ik01MS43MDcsOC4yOTNjLTAuMzkxLTAuMzkxLTEuMDIzLTAuMzkxLTEuNDE0LDBsLTQyLDQyYy0wLjM5MSwwLjM5MS0wLjM5MSwxLjAyMywwLDEuNDE0QzguNDg4LDUxLjkwMiw4Ljc0NCw1Miw5LDUyICAgczAuNTEyLTAuMDk4LDAuNzA3LTAuMjkzbDQyLTQyQzUyLjA5OCw5LjMxNiw1Mi4wOTgsOC42ODQsNTEuNzA3LDguMjkzeiIgZmlsbD0iI2UwZDE5MiIvPgoJPHBhdGggZD0iTTUyLjg0MSwxMC41NjFMNDIsMjEuNDAydjI3LjQ5MUM0Miw1MC42MDYsNDAuNjA2LDUyLDM4Ljg5Myw1MmMtMC41NDcsMC0xLjA5LTAuMTQ5LTEuNTcxLTAuNDMyICAgYy0wLjA2My0wLjAzNy0wLjEyMS0wLjA4MS0wLjE3NC0wLjEzMUwyNC4xMDYsMzkuMjk2TDEwLjU2MSw1Mi44NDFDMTUuOTgyLDU3LjQ2OSwyMi43OTUsNjAsMzAsNjAgICBjOC4wMTMsMCwxNS41NDctMy4xMjEsMjEuMjEzLTguNzg3UzYwLDM4LjAxMyw2MCwzMEM2MCwyMi43OTUsNTcuNDY5LDE1Ljk4Miw1Mi44NDEsMTAuNTYxeiIgZmlsbD0iI2UwZDE5MiIvPgoJPHBhdGggZD0iTTE1LjEwNCwzOUMxMy4zOTIsMzksMTIsMzcuNjA3LDEyLDM1Ljg5NlYyMy4xMDRDMTIsMjEuMzkzLDEzLjM5MiwyMCwxNS4xMDQsMjBoOC4zMjRjMC4xNjYsMCwwLjMyOS0wLjAzNywwLjQ3OS0wLjEwOSAgIEwzNy4xNDgsNy41NjNjMC4wNTMtMC4wNSwwLjExMi0wLjA5NCwwLjE3NC0wLjEzMUMzNy44MDMsNy4xNDksMzguMzQ2LDcsMzguODkzLDdDNDAuNjA2LDcsNDIsOC4zOTQsNDIsMTAuMTA2djQuNDc5bDcuNDMzLTcuNDMyICAgQzQ0LjAxMywyLjUyOSwzNy4yMDMsMCwzMCwwQzIxLjk4NywwLDE0LjQ1MywzLjEyMSw4Ljc4Nyw4Ljc4N0MzLjEyMSwxNC40NTMsMCwyMS45ODcsMCwzMGMwLDcuMjAyLDIuNTI4LDE0LjAxMyw3LjE1MywxOS40MzIgICBMMTcuNTg2LDM5SDE1LjEwNHoiIGZpbGw9IiNlMGQxOTIiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K';
+
 function clearAllCounts() {
     attackedCell = "";
     cellX = undefined;
@@ -76,56 +77,60 @@ function clearAllCounts() {
     document.querySelector('.destrPlCount').textContent = 0;
     document.querySelector('.destrAlCount').textContent = 0;
 }
-function fadeOut(el){
+
+function fadeOut(el) {
     el.style.opacity = 1;
-  
+
     (function fade() {
-      if ((el.style.opacity -= .1) < 0) {
-        el.style.display = "none";
-      } else {
-        requestAnimationFrame(fade);
-      }
+        if ((el.style.opacity -= .1) < 0) {
+            el.style.display = "none";
+        } else {
+            requestAnimationFrame(fade);
+        }
     })();
-  };
-  
-function fadeIn(el, display){
+};
+
+function fadeIn(el, display) {
     el.style.opacity = 0;
     el.style.display = display || "block";
 
     (function fade() {
         var val = parseFloat(el.style.opacity);
         if (!((val += .1) > 1)) {
-        el.style.opacity = val;
-        requestAnimationFrame(fade);
+            el.style.opacity = val;
+            requestAnimationFrame(fade);
         }
     })();
 };
+
 function hitSoundPlay() {
     var hitSound = document.querySelector(".hit_sound");
     hitSound.volume = 0.3;
     hitSound.stop();
     hitSound.play();
 }
-document.querySelector('.title-menu__music-option').addEventListener('click', function(){
+document.querySelector('.title-menu__music-option').addEventListener('click', function() {
     musicTurn();
 });
-document.querySelector('.music-volume-control').addEventListener('click', function(){
+document.querySelector('.music-volume-control').addEventListener('click', function() {
     musicTurn();
 });
-function musicTurn(){
-	if (musicTrack.volume === 1) {
+
+function musicTurn() {
+    if (musicTrack.volume === 1) {
         musicTrack.volume = 0;
         document.querySelector('.title-menu__music-option-turn').innerHTML = 'ВЫКЛ.';
         document.querySelector('.music-volume-control img').src = musicOffIcon;
-        
-	} else {
-        document.querySelector('.title-menu__music-option-turn').innerHTML ='ВКЛ.';
+
+    } else {
+        document.querySelector('.title-menu__music-option-turn').innerHTML = 'ВКЛ.';
         document.querySelector('.music-volume-control img').src = musicOnIcon;
-		musicTrack.volume = 1
-	}
+        musicTrack.volume = 1
+    }
 }
+
 function musicPlay() {
-    
+
     musicTrack.play();
     musicTrack.addEventListener('ended', function() {
         this.currentTime = 0;
@@ -147,15 +152,15 @@ function startGame() {
 }
 
 function typeText(l, d, g, h, m) { //эффект печатающгося текста
-var b, a = d.shift(),
-    f, e = g,
-    k = performance.now();
-d.push(a);
-a = a.split("");
-b = document.createTextNode(a.shift());
-l.appendChild(b);
+    var b, a = d.shift(),
+        f, e = g,
+        k = performance.now();
+    d.push(a);
+    a = a.split("");
+    b = document.createTextNode(a.shift());
+    l.appendChild(b);
     requestAnimationFrame(function n(c) {
-        if(d.length === 0) {//если массив закончился то завершаем набор. (и вызываем ф-ию)
+        if (d.length === 0) { //если массив закончился то завершаем набор. (и вызываем ф-ию)
             setTimeout(gameplayStart, 3000);
             return;
         }
@@ -166,35 +171,39 @@ l.appendChild(b);
         requestAnimationFrame(n)
     })
 };
+
 function introStart() {
     musicPlay();
     fadeOut(document.querySelector('.overlay_screen'));
     document.querySelector('.title-container').style.display = 'none';
     document.body.classList.remove('bg-title-screen');
     document.body.classList.add('bg-black-screen');
-    
+
     document.body.insertAdjacentHTML('beforeend',
-        '<div class="cut-scene-container"><div class="cut-scene-container__avatar-block"><div class="cut-scene-container__avatar-block__avatar"><img src="enemy_avatar.png"></div><div class="cut-scene-container__avatar-block__avatar"><img src="enemy_avatar.png"></div></div><div class="cut-scene-container__textblock"></div></div>'
+        '<div class="cut-scene-container"><div class="cut-scene-container__avatar-block"><div class="cut-scene-container__avatar-block__avatar"><img src="enemy_avatar.png"></div><div class="cut-scene-container__avatar-block__avatar"><img src="enemy_avatar2.png"></div></div><div class="cut-scene-container__textblock"></div></div>'
     );
-    
+
     var textContainer = document.querySelector(".cut-scene-container__textblock");
-    typeText(textContainer, ["Враг атакует!!"], 70, 2000, 70);
+    typeText(textContainer, ["[Пират]: Кто это к нам колеса катит?", "[Вы(тоже пират)]: Она — со мной, углепластик, так охладите трахание. Я рассматриваю её пользу."], 30, 1500, 70);
 }
+
 function gameplayStart() {
-    
+
     fadeOut(document.querySelector('.cut-scene-container'));
     fadeIn(document.querySelector('.overlay_screen'));
     document.querySelector('.wrapper-gameplay').style.display = 'flex';
     setAllShipRandom();
-    setTimeout(function(){
-        
+    setTimeout(function() {
+
         fadeOut(document.querySelector('.overlay_screen'));
     }, 1000);
-    
+
 }
+
 function notificationSet(notificationText) {
     document.querySelector('.notifications-block').innerHTML = notificationText;
 }
+
 function setDemarkDestroyedShip(currentX, currentY, parent) {
     var variationDirections = [
         '[data-x="' + (currentX + 1) + '"][data-y="' + currentY + '"]',
@@ -213,14 +222,16 @@ function setDemarkDestroyedShip(currentX, currentY, parent) {
         }
     }
 }
+
 function setDestroyStatusForAl(targetShip) {
     var dataIdShip = targetShip.getAttribute('data-id-ship');
-    setTimeout(function() { 
+    setTimeout(function() {
         [].forEach.call(document.querySelectorAll('.areaPl .cell[data-id-ship="' + dataIdShip + '"]'), function(el) {
             el.classList.add('destroyed');
         })
     }, 1000);
 }
+
 function attackAl(parent) { // поведение Al при атаке
     document.querySelector('.overlay').style.display = 'block';
     if (hitAlCount === 20) {
@@ -444,7 +455,7 @@ function attackAl(parent) { // поведение Al при атаке
                     document.querySelector('.destrAlCount').textContent = ++destrAlCount; //прибавляем счет подбитых кораблей компом
                     alTurnStatus = "default";
                 }
-                
+
                 setTimeout(function() { attackAl('.areaPl') }, 1000);
                 return;
             } else {
@@ -487,7 +498,7 @@ function attackAl(parent) { // поведение Al при атаке
                     document.querySelector('.destrAlCount').textContent = ++destrAlCount; //прибавляем счет подбитых кораблей компом
                     alTurnStatus = "default";
                 }
-                
+
                 setTimeout(function() { attackAl('.areaPl') }, 1000);
                 return;
             } else {
@@ -538,7 +549,7 @@ function attackPl() {
         if ((document.querySelectorAll('.areaAl .cell[data-id-ship="' + dataIdShip + '"][data-attacked="no"]').length) == 0) {
             document.querySelector('.destrPlCount').textContent = ++destrPlCount; //прибавляем счет подбитых кораблей игркоком
             //alert('Вы размудохали вражеский корабль');
-            notificationSet('Вы размудохали вражеский корабль');
+            notificationSet('Вы разнесли в щепки вражеский корабль');
             [].forEach.call(document.querySelectorAll('.areaAl .cell[data-id-ship="' + dataIdShip + '"]'), function(el) {
                 el.classList.add('destroyed');
             });
